@@ -16,7 +16,7 @@ body {
 }
 
 
-/*  HEARDER  */
+/*  TOP BAR  */
 
 
 .top-header {
@@ -63,6 +63,9 @@ nav li a {
     color: black;
 }
 
+
+/*  HEADER 2  */
+
 .station-info {
     padding: 1rem;
     border-bottom: 1px solid black;
@@ -73,6 +76,12 @@ nav li a {
     color: grey;
 }
 
+.current-station {
+    display: flex;
+    flex-direction: row; 
+    align-items: baseline;
+}
+
 .station-description {
     padding-top: 0.5rem;
 }
@@ -80,24 +89,11 @@ nav li a {
 .station-info h1 {
     text-transform: uppercase;
     font-size: 2rem;
+    padding: 0 2rem;
 }
 
-@media only screen and (min-width: 500px) {
-    .station-info h1 {
-        display: inline;
-        padding-left: 2rem;
-    }
-}
-
-@media only screen and (min-width: 950px) {
-    .station-info {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-    }
-
-    .station-description::before {
-        content: "//";
-        margin-left: 2rem;
+@media only screen and (min-width: 600px) {
+    .station-description {
+        max-width: 80%;
     }
 }
