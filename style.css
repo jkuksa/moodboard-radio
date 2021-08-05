@@ -21,24 +21,49 @@ body {
 
 .top-header {
     width: 100%;
-    height: 4rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     border-bottom: 1px solid black;
 }
 
+@media only screen and (min-width: 450px) {
+    .top-header {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 4rem;
+    }
+}
+
 .logo {
+    width: 100%;
     flex: 2;
-    padding-left: 2rem;
     align-self: center;
     font-size: 1.7rem;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+@media only screen and (min-width: 450px) {
+    .logo {
+        text-align: start;
+        border-bottom: none;
+        padding-left: 2rem;
+    }
 }
 
 nav {
     display: flex;
     height: 100%;
     flex: 1;
+    height: 2rem;
+}
+
+@media only screen and (min-width: 450px) {
+    nav {
+        height: 4rem;
+    }
 }
 
 nav ul {
@@ -52,7 +77,20 @@ nav li {
     flex: 1;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid black;
+}
+
+nav li:first-of-type {
+    border-right: 1px solid black;
+}
+
+@media only screen and (min-width: 450px) {
+    nav li:first-of-type {
+        border-right: none;
+    }
+
+    nav li {
+        border-left: 1px solid black;
+    }
 }
 
 nav li:hover {
@@ -72,28 +110,61 @@ nav li a {
 }
 
 .current {
-    font-style: italic;
-    color: grey;
+    display: none;
+}
+
+@media only screen and (min-width: 450px) {
+    .current {
+        display: block;
+        font-style: italic;
+        color: grey;
+    } 
 }
 
 .current-station {
     display: flex;
     flex-direction: row; 
     align-items: baseline;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 450px) {
+    .current-station {
+        justify-content: start;
+    }
 }
 
 .station-description {
     padding-top: 0.5rem;
 }
 
+
 .station-info h1 {
     text-transform: uppercase;
     font-size: 2rem;
-    padding: 0 2rem;
+}
+
+@media only screen and (min-width: 450px) {
+    .station-info h1 {
+        padding: 0 2rem;
+    }
 }
 
 @media only screen and (min-width: 600px) {
     .station-description {
         max-width: 80%;
     }
+}
+
+
+/*  FOOTER   */
+
+footer {
+    width: 100%;
+    height: 2rem;
+    border-top: 1px solid black;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
 }
