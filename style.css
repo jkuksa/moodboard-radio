@@ -94,7 +94,14 @@ nav li:first-of-type {
 }
 
 nav li:hover {
-    background-color: pink;
+    background-color: lightgrey;
+    border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 450px) {
+    nav li:hover {
+        border-bottom: none;
+    }
 }
 
 nav li a {
@@ -102,7 +109,7 @@ nav li a {
 }
 
 
-/*  HEADER 2  */
+/*  HEADER  */
 
 .station-info {
     padding: 1rem;
@@ -141,7 +148,7 @@ nav li a {
 
 .station-info h1 {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 450px) {
@@ -150,7 +157,11 @@ nav li a {
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 550px) {
+    .station-info h1 {
+        font-size: 2rem;
+    }
+
     .station-description {
         max-width: 80%;
     }
