@@ -40,7 +40,8 @@ body {
     width: 100%;
     flex: 2;
     align-self: center;
-    font-size: 1.7rem;
+    height: 2rem;
+    font-size: 1.5rem;
     border-bottom: 1px solid black;
     text-align: center;
 }
@@ -53,25 +54,28 @@ body {
     }
 }
 
-nav {
+
+/*  MAIN NAVIGATION  */
+
+.main-menu {
     display: flex;
-    height: 100%;
     flex: 1;
     height: 2rem;
+    width: 100%;
 }
 
 @media only screen and (min-width: 450px) {
-    nav {
+    .main-menu {
         height: 4rem;
     }
 }
 
-nav ul {
+.top-menu {
     display: flex;
     width: 100%;
 }
 
-nav li {
+.top-menu li {
     height: 100%;
     display: flex;
     flex: 1;
@@ -79,35 +83,68 @@ nav li {
     justify-content: center;
 }
 
-nav li:first-of-type {
+.top-menu li:first-of-type {
     border-right: 1px solid black;
 }
 
 @media only screen and (min-width: 450px) {
-    nav li:first-of-type {
+    .top-menu li:first-of-type {
         border-right: none;
     }
 
-    nav li {
+    .top-menu li {
         border-left: 1px solid black;
     }
 }
 
-nav li:hover {
+.main-menu li:hover {
     background-color: lightgrey;
     border-bottom: 1px solid black;
 }
 
 @media only screen and (max-width: 450px) {
-    nav li:hover {
+    .main-menu li:hover {
         border-bottom: none;
     }
 }
 
-nav li a {
+.main-menu li a {
     color: black;
 }
 
+.dropdown {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+}
+
+@media only screen and (min-width: 450px) {
+    .dropdown {
+        display: flex;
+        width: 15.8%;
+        height: 12rem;
+        flex-direction: column;
+        position: absolute;
+        top: 4rem;
+    }
+}
+
+.dropdown li {
+    height: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    background-color: #efefef;
+}
+
+@media only screen and (min-width: 450px) {
+    .dropdown li {
+        min-height: 4rem;
+    }
+}
 
 /*  HEADER  */
 
