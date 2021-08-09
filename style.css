@@ -37,77 +37,138 @@ body {
 }
 
 .logo {
-    width: 100%;
-    flex: 2;
+    width: 100vw;
     align-self: center;
-    font-size: 1.7rem;
+    height: 2rem;
+    font-size: 1.5rem;
     border-bottom: 1px solid black;
     text-align: center;
 }
 
 @media only screen and (min-width: 450px) {
     .logo {
+        width: 70vw;
         text-align: start;
         border-bottom: none;
         padding-left: 2rem;
     }
 }
 
-nav {
+
+/*  MAIN NAVIGATION  */
+
+.main-menu {
     display: flex;
-    height: 100%;
-    flex: 1;
     height: 2rem;
+    width: 100vw;
+    /*border-bottom: 1px solid black;*/
 }
 
 @media only screen and (min-width: 450px) {
-    nav {
+    .main-menu {
         height: 4rem;
+        width: 30vw;
     }
 }
 
-nav ul {
+.top-menu {
     display: flex;
-    width: 100%;
+    width: 100vw;
 }
 
-nav li {
-    height: 100%;
+.top-menu li {
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
 }
 
-nav li:first-of-type {
+.top-menu li:first-of-type {
     border-right: 1px solid black;
 }
 
+
 @media only screen and (min-width: 450px) {
-    nav li:first-of-type {
-        border-right: none;
+    .top-menu {
+        width: 30vw;
     }
 
-    nav li {
+    .top-menu li {
+        width: 15vw;
         border-left: 1px solid black;
     }
-}
 
-nav li:hover {
-    background-color: lightgrey;
-    border-bottom: 1px solid black;
-}
+    .top-menu li:hover {
+        border-bottom: 1px solid black;
+    }
 
-@media only screen and (max-width: 450px) {
-    nav li:hover {
-        border-bottom: none;
+    .top-menu li:first-of-type {
+        border-right: none;
     }
 }
 
-nav li a {
+.main-menu li {
+    width: 50vw;
+}
+
+.main-menu li:hover {
+    background-color: lightgrey;
+}
+
+.main-menu li a {
     color: black;
 }
 
+.dropdown {
+    display: flex;
+    height: 3rem;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    display: none;
+}
+
+@media only screen and (min-width: 450px) {
+    .dropdown {
+        display: flex;
+        width: 15vw;
+        height: 12rem;
+        flex-direction: column;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        display: none;
+    }
+}
+
+.dropdown li {
+    height: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    background-color: #efefef;
+    width: 100vw;
+}
+
+.dropdown li:first-child {
+    border-right: none;
+    border-top: 1px solid black;
+}
+
+.dropdown li:hover {
+    border-bottom: 1px solid black;
+}
+
+@media only screen and (min-width: 450px) {
+    .dropdown li {
+        min-height: 4rem;
+        width: 15vw;
+        right: 0;
+    }
+
+    .dropdown li:first-child {
+        border-top: none;
+    }
+}
 
 /*  HEADER  */
 
