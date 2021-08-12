@@ -114,6 +114,7 @@ nav li a {
 .station-info {
     padding: 1rem;
     border-bottom: 1px solid black;
+    margin-bottom: 1rem;
 }
 
 .current {
@@ -165,6 +166,267 @@ nav li a {
     .station-description {
         max-width: 80%;
     }
+}
+
+
+/*  GRID  */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(37, 3.5rem);
+    grid-gap: 4px;
+}
+
+figure {
+    position: relative;
+}
+
+.figure-one {
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 3;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    background-color: grey;
+    color: black;
+    font-size: 0.8rem;
+    position: absolute;
+    padding: 5px;
+    z-index: 5;
+    text-align: center;
+}
+
+figcaption a {
+    color: black;
+    font-weight: bold;
+}
+
+.figure-two {
+    grid-row: 4 / span 4;
+    grid-column: 3 / span 2;
+}
+
+.caption-ivan, .caption-vasilisa {
+    top: 1rem;
+    left: -8rem;
+    width: 10rem;
+} 
+
+.quote {
+    background-color: white;
+    border: 1px solid black;
+    overflow: scroll;
+    padding: 10px;
+    margin: 0 10px 1rem 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.quote-one {
+    grid-row: 8 / span 3;
+    grid-column: 1 / span 4;
+}
+
+.figure-three {
+    grid-row: 11 / span 4;
+    grid-column: 1 / span 2;
+}
+
+.figure-four {
+    grid-row: 15 / span 3;
+    grid-column: 3 / span 2;
+}
+
+.quote-two {
+    grid-row: 19 / span 3;
+    grid-column: 1 / span 4;
+}
+
+.figure-five {
+    grid-row: 22 / span 3;
+    grid-column: 1 / span 3;
+}
+
+.figure-six {
+    grid-row: 25 / span 3;
+    grid-column: 3 / span 3;
+}
+
+.quote-three {
+    grid-row: 29 / span 3;
+    grid-column: 1 / span 4;
+}
+
+.figure-seven {
+    grid-row: 32 / span 3;
+    grid-column: 1 / span 5;
+}
+
+
+
+@media only screen and (min-width: 400px) and (max-width: 699px) {
+    main {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(28, 3.5rem);
+    }
+
+    .figure-one {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 3;
+    }
+
+    .figure-two {
+        grid-column: 5 / span 2;
+        z-index: 10;
+    }
+
+    .caption-ivan {
+        top: 1rem;
+        left: -9rem;
+        width: 10rem;
+    } 
+
+    .quote-one {
+        grid-row: 6 / span 3;
+        grid-column: 1 / span 4;
+    }
+
+    .figure-three {
+        grid-row: 9 / span 4;
+        grid-column: 1 / span 2;
+    }
+
+    .figure-four {
+        grid-row: 10/ span 3;
+        grid-column: 4 / span 3;
+    }
+
+    .caption-vasilisa {
+        left: -3rem; 
+        top:-2rem;
+        width: 12rem;
+    }
+
+    .quote-two {
+        grid-row: 16 / span 3;
+        grid-column: 2 / span 4;
+    }
+    
+    .figure-five {
+        grid-row: 18 / span 3;
+        grid-column: 1 / span 3;
+    }
+
+    .figure-six {
+        grid-row: 19 / span 5;
+        grid-column: 5 / span 2;
+    }
+
+    .quote-three {
+        grid-row: 22 / span 4;
+        grid-column: 1 / span 4;
+    }
+
+    .figure-seven {
+        grid-row: 26 / span 3;
+        grid-column: 4 / span 3;
+    }
+
+    .caption-sirin {
+        top: 3rem;
+        left: -14rem;
+        width: 15rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 700px) {
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(24, 3.5rem);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .figure-one {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 5;
+    }
+
+    .figure-two {
+        grid-row: 7 / span 5;
+        grid-column: 7 / span 4;
+        z-index: 10;
+    }
+
+    .caption-ivan {
+        top: 1rem;
+        left: 9rem;
+        width: 10rem;
+    } 
+
+    .quote-one {
+        grid-row: 4 / span 3;
+        grid-column: 3 / span 6;
+        z-index: 10;
+    }
+
+    .figure-three {
+        grid-row: 1 / span 5;
+        grid-column: 10 / span 3;
+    }
+
+    .figure-four {
+        grid-row: 8 / span 3;
+        grid-column: 2 / span 4;
+    }
+
+    .caption-vasilisa {
+        left: -3rem; 
+        top:-2rem;
+        width: 12rem;
+    }
+
+    .quote-two {
+        grid-row: 14 / span 3;
+        grid-column: 7 / span 5;
+    }
+    
+    .figure-five {
+        grid-row: 16 / span 5;
+        grid-column: 5 / span 5;
+    }
+
+    .figure-six {
+        grid-row: 14 / span 4;
+        grid-column: 1/ span 3;
+    }
+
+    .quote-three {
+        grid-row: 20 / span 3;
+        grid-column: 1/ span 6;
+    }
+
+    .figure-seven {
+        grid-row: 21 / span 5;
+        grid-column: 8/ span 5;
+    }
+
+    .caption-sirin {
+        top: 7rem;
+        left: -14rem;
+        width: 15rem;
+    }
+    
 }
 
 
