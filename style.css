@@ -15,6 +15,9 @@ body {
     font-family: 'Zilla Slab', serif;
 }
 
+a {
+    color: black;
+}
 
 /*  TOP BAR  */
 
@@ -176,6 +179,17 @@ body {
     padding: 1rem;
     border-bottom: 1px solid black;
     margin-bottom: 1rem;
+}
+
+.station-toggle {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.station-toggle a {
+    color: grey;
 }
 
 .current {
