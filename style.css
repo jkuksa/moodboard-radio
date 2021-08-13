@@ -235,7 +235,7 @@ body {
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(37, 3.5rem);
+    grid-template-rows: repeat(38, 3.5rem);
     grid-gap: 4px;
 }
 
@@ -282,17 +282,22 @@ figcaption a {
 .quote {
     background-color: white;
     border: 1px solid black;
-    overflow: scroll;
     padding: 10px;
     margin: 0 10px 1rem 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 99;
 }
 
+.quote-source {
+    display: contents;
+    font-style: italic;
+}
+
 .quote-one {
-    grid-row: 8 / span 3;
+    grid-row: 8 / span 4;
     grid-column: 1 / span 4;
 }
 
@@ -307,27 +312,27 @@ figcaption a {
 }
 
 .quote-two {
-    grid-row: 19 / span 3;
+    grid-row: 19 / span 4;
     grid-column: 1 / span 4;
 }
 
 .figure-five {
-    grid-row: 22 / span 3;
+    grid-row: 23 / span 3;
     grid-column: 1 / span 3;
 }
 
 .figure-six {
-    grid-row: 25 / span 3;
+    grid-row: 26 / span 3;
     grid-column: 3 / span 3;
 }
 
 .quote-three {
-    grid-row: 29 / span 3;
+    grid-row: 30 / span 4;
     grid-column: 1 / span 4;
 }
 
 .figure-seven {
-    grid-row: 32 / span 3;
+    grid-row: 34 / span 3;
     grid-column: 1 / span 5;
 }
 
@@ -336,7 +341,7 @@ figcaption a {
 @media only screen and (min-width: 400px) and (max-width: 699px) {
     main {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(28, 3.5rem);
+        grid-template-rows: repeat(29, 3.5rem);
     }
 
     .figure-one {
@@ -356,7 +361,7 @@ figcaption a {
     } 
 
     .quote-one {
-        grid-row: 6 / span 3;
+        grid-row: 6 / span 4;
         grid-column: 1 / span 4;
     }
 
@@ -366,7 +371,7 @@ figcaption a {
     }
 
     .figure-four {
-        grid-row: 10/ span 3;
+        grid-row: 11/ span 3;
         grid-column: 4 / span 3;
     }
 
@@ -377,27 +382,27 @@ figcaption a {
     }
 
     .quote-two {
-        grid-row: 16 / span 3;
+        grid-row: 16 / span 4;
         grid-column: 2 / span 4;
     }
     
     .figure-five {
-        grid-row: 18 / span 3;
+        grid-row: 19 / span 3;
         grid-column: 1 / span 3;
     }
 
     .figure-six {
-        grid-row: 19 / span 5;
+        grid-row: 20 / span 5;
         grid-column: 5 / span 2;
     }
 
     .quote-three {
-        grid-row: 22 / span 4;
+        grid-row: 23 / span 4;
         grid-column: 1 / span 4;
     }
 
     .figure-seven {
-        grid-row: 26 / span 3;
+        grid-row: 27 / span 3;
         grid-column: 4 / span 3;
     }
 
@@ -459,7 +464,7 @@ figcaption a {
 
     .quote-two {
         grid-row: 14 / span 3;
-        grid-column: 7 / span 5;
+        grid-column: 6 / span 6;
     }
     
     .figure-five {
@@ -497,7 +502,9 @@ footer {
     width: 100%;
     height: 2rem;
     border-top: 1px solid black;
+    background-color: #efefef;
     position: fixed;
+    z-index: 999;
     width: 100%;
     bottom: 0;
     right: 0;
