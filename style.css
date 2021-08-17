@@ -12,7 +12,7 @@ html {
 
 body {
     background-color: #efefef;
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 a {
@@ -44,6 +44,7 @@ a {
     align-self: center;
     height: 2rem;
     font-size: 1.5rem;
+    text-transform: uppercase;
     border-bottom: 1px solid black;
     text-align: center;
 }
@@ -114,7 +115,7 @@ a {
 }
 
 .main-menu li:hover {
-    background-color: lightgrey;
+    background-color: #dbd8d6;
 }
 
 .main-menu li a {
@@ -185,11 +186,12 @@ a {
     display: flex;
     flex-direction: row;
     padding: 0.5rem;
+    font-size: 0.9rem;
     justify-content: space-between;
 }
 
 .station-toggle a {
-    color: grey;
+    color: #838180;
 }
 
 .current {
@@ -200,7 +202,7 @@ a {
     .current {
         display: block;
         font-style: italic;
-        color: grey;
+        color: #838180;
     } 
 }
 
@@ -265,10 +267,11 @@ figure {
 .image {
     max-width: 100%;
     height: auto;
+    border: 1px solid black;
 }
 
 figcaption {
-    background-color: grey;
+    background-color: #dbd8d6;
     color: black;
     font-size: 0.8rem;
     position: absolute;
@@ -287,7 +290,7 @@ figcaption a {
     grid-column: 3 / span 2;
 }
 
-.caption-ivan, .caption-vasilisa {
+.caption-2, .caption-4 {
     top: 1rem;
     left: -8rem;
     width: 10rem;
@@ -303,6 +306,7 @@ figcaption a {
     justify-content: center;
     align-items: center;
     z-index: 99;
+    font-size: 0.9rem;
 }
 
 .quote-source {
@@ -368,7 +372,7 @@ figcaption a {
         z-index: 10;
     }
 
-    .caption-ivan {
+    .caption-2 {
         top: 1rem;
         left: -9rem;
         width: 10rem;
@@ -389,7 +393,7 @@ figcaption a {
         grid-column: 4 / span 3;
     }
 
-    .caption-vasilisa {
+    .caption-4 {
         left: -3rem; 
         top:-2rem;
         width: 12rem;
@@ -420,7 +424,7 @@ figcaption a {
         grid-column: 4 / span 3;
     }
 
-    .caption-sirin {
+    .caption-7 {
         top: 3rem;
         left: -14rem;
         width: 15rem;
@@ -448,7 +452,7 @@ figcaption a {
         z-index: 10;
     }
 
-    .caption-ivan {
+    .caption-2 {
         top: 1rem;
         left: 9rem;
         width: 10rem;
@@ -470,7 +474,7 @@ figcaption a {
         grid-column: 2 / span 4;
     }
 
-    .caption-vasilisa {
+    .caption-4 {
         left: -3rem; 
         top:-2rem;
         width: 12rem;
@@ -501,7 +505,7 @@ figcaption a {
         grid-column: 8/ span 5;
     }
 
-    .caption-sirin {
+    .caption-7 {
         top: 7rem;
         left: -14rem;
         width: 15rem;
